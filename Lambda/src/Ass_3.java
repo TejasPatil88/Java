@@ -5,15 +5,16 @@
 interface MyInterface
 {
 	void fun();
+	
 }
 public class Ass_3 {
-	static void perform()
-	{
-		
+	public static void perform(MyInterface ref) {
+		ref.fun();
 	}
 	public static void main(String[] args) {
-	
-
+		
+		MyInterface ref = ()->{System.out.println("inside fun fucntion of MyInterface");};	
+		perform(ref);
 	}
 
 }
