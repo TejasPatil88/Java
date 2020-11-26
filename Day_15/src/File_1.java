@@ -20,8 +20,10 @@ public class File_1
 		try {
 			
 					//File writing
+			@SuppressWarnings({ "unused", "resource" })
 			FileOutputStream fo= new FileOutputStream("F:\\temp/FileDemo.txt");
 			System.out.println("Enter 10 characters");
+			@SuppressWarnings("resource")
 			Scanner sc= new Scanner(System.in);
 			try {
 				FileWriter fw= new FileWriter("F:\\temp/FileDemo.txt");
@@ -42,6 +44,7 @@ public class File_1
 					System.out.println("file does not exists");
 					System.exit(0);
 				}
+				@SuppressWarnings("resource")
 				FileInputStream fis= new FileInputStream("F:\\\\temp/FileDemo.txt");
 				byte b[]=new byte[((int)f.length())];
 				fis.read(b);
