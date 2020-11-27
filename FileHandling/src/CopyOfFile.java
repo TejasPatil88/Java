@@ -1,8 +1,17 @@
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
+
+//write a file copy program using FileInputStream and FileOutputStream
+//
+//hint: existing file u need to open using FileInputStream and new file u need
+//to open using FileOutputStream.
+//
+//first read existing file's data inside byte array and then write the same
+//byte array inside new file.
+//
+//byte array should be created equivalent to the length of existing file.
+
 
 public class CopyOfFile {
 
@@ -17,23 +26,12 @@ public class CopyOfFile {
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		byte b[] = new byte[(int ) (f.length())];
 		System.out.println(b.length);
-		try {
 			fis.read(b);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		String s = new String(b);
 		System.out.println(s);
-
-
-		try {
+		
 			@SuppressWarnings("resource")
 			FileOutputStream fos = new FileOutputStream("F:\\abc1.txt",true);
 			@SuppressWarnings("unused")

@@ -1,11 +1,12 @@
 import java.io.RandomAccessFile;
+
 //2) using RandomAccessFile class create a file.
 //accept a message from user and write in a file.
 //now read the message which u have stored in a file.
 //now again accept a message and write in a file at the end of existing message.
 //now read the entire content of file . ( u should be able to read both the messages now)
 
-public class File_2 {
+public class RandomAccess {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
